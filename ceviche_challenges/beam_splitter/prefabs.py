@@ -29,7 +29,7 @@ def pico_splitter_spec(**overrides) -> spec.BeamSplitterSpec:
   defaults = spec.BeamSplitterSpec(
       wg_width=500 * u.nm,
       wg_length=1000 * u.nm,
-      wg_separation=4500 * u.nm,
+      wg_separation=4000 * u.nm,
       wg_mode_padding=480 * u.nm,
       port_pml_offset=40 * u.nm,
       variable_region_size=(10000 * u.nm, 5000 * u.nm),
