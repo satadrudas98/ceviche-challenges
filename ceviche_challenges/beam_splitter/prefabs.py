@@ -27,16 +27,16 @@ QSequence = Sequence[Q]  # pylint: disable=invalid-name
 def pico_splitter_spec(**overrides) -> spec.BeamSplitterSpec:
   """Design spec for the pico beam splitter with a 2.0 by 1.4 um design region."""
   defaults = spec.BeamSplitterSpec(
-      wg_width=160 * u.nm,
-      wg_length=400 * u.nm,
-      wg_separation=1080 * u.nm,
+      wg_width=500 * u.nm,
+      wg_length=1000 * u.nm,
+      wg_separation=4500 * u.nm,
       wg_mode_padding=480 * u.nm,
       port_pml_offset=40 * u.nm,
-      variable_region_size=(2000 * u.nm, 1400 * u.nm),
+      variable_region_size=(10000 * u.nm, 5000 * u.nm),
       cladding_permittivity=1.0,
       slab_permittivity=12.25,
       input_monitor_offset=40 * u.nm,
-      design_symmetry=None,
+      design_symmetry='xy',
       pml_width=20,
   )
   return dataclasses.replace(defaults, **overrides)
